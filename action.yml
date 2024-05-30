@@ -18,4 +18,6 @@ runs:
   entrypoint: "/bin/bash"
   args:
     - -c
-    - ggshield secret scan --recursive ${{ inputs.args }} path .
+    - |
+      git config --global --add safe.directory "$PWD" \
+      & ggshield secret scan --recursive ${{ inputs.args }} path .
