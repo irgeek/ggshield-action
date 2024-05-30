@@ -20,4 +20,4 @@ runs:
     - -c
     - |
       git config --global --add safe.directory "$PWD" \
-      & ggshield secret scan --recursive ${{ inputs.args }} path .
+      & ggshield secret scan path --recursive --yes ${{ inputs.args }} .
